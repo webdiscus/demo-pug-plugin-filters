@@ -4,7 +4,20 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        link(href="../scss/style.scss" rel="stylesheet")
+        script(src="../js/index.js" defer="defer")
     body
+        h1 Hello World!
+        //- Inline markdown syntax
+        :markdown
+            ## Inlined markdown
+
+            * one _thing_ has *em*phasis
+            * two __things__ are **bold**
+
+        //- Include markdown file
+        include:markdown ../markdown/readme.md
+
         :my-own-filter
             # Title
             - 1
